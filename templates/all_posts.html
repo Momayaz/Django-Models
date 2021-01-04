@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block header%}
+<h1>Posts:</h1>
+{% endblock header %}
+
+{% block main %}
+<h2 style="color: red;">All Posts</h2>
+<ul>
+  {% for post in object_list %}
+  <li>
+    <a href="{% url 'post_details' post.pk %}">{{ post.title }}</a> by: {{ post.author }}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock main %}

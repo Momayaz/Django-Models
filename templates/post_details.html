@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header%}
+<h2>posted in: {{ post.created }}</h2>
+{% endblock header %}
+
+{% block main %}
+<h4> {{ post.title }} </h4>
+<h4> {{ post.body }} </h4>
+<br>
+<h4>posted by: {{ post.author }} </h4>
+<hr>
+{% endblock main %}
